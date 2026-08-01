@@ -1,0 +1,22 @@
+# Environnement virtuel
+venv/
+.venv/
+
+# Secrets
+.env
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Logs
+logs/*.log
+
+# Fichiers générés
+data/processed/
+
+# Fichiers volumineux bruts
+data/raw/*.xlsx
+
+# VS Code
+.vscode/
