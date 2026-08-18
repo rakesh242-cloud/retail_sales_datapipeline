@@ -4,13 +4,15 @@ venv/
 
 # Secrets
 .env
+.env.*
+!.env.example
 
 # Cache Python
 __pycache__/
 *.pyc
 
 # Logs
-logs/*.log
+logs/
 
 # Fichiers générés
 data/processed/
@@ -20,3 +22,7 @@ data/raw/*.xlsx
 
 # VS Code
 .vscode/
+
+# Système
+.DS_Store
+Thumbs.db

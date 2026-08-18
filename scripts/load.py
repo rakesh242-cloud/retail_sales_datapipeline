@@ -1,4 +1,6 @@
+import pandas as pd
 from io import StringIO
+
 from database import get_connection
 from logger import logger
 
@@ -40,8 +42,12 @@ def copy_dataframe(
                 copy.write(data)
 
 
-def load(clean_sales_df, rejected_df):
+def load(clean_file_path, rejected_file_path):
     connection = None
+
+    # Lecture des fichiers produits par Transform
+    clean_sales_df = pd.read_pickle(clean_file_path)
+    rejected_df = pd.read_pickle(rejected_file_path)
 
     clean_columns = [
         "InvoiceNo",
