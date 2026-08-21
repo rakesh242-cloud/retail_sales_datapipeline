@@ -21,3 +21,6 @@ jobs:
 
       - name: Check Python files
         run: python -m compileall scripts dags
+
+      - name: Build Docker image
+        run: docker build -t retail-sales-pipeline .
