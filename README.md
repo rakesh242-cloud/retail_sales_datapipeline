@@ -1,6 +1,6 @@
 # Retail Sales Data Pipeline
 
-End-to-end ETL data pipeline for processing retail sales data using Python, PostgreSQL, Docker, and Apache Airflow.
+An end-to-end ETL pipeline that cleans the Online Retail dataset, separates valid and rejected sales, loads both into PostgreSQL, and runs with Apache Airflow and Docker.
 
 ## Overview
 
@@ -73,7 +73,7 @@ The pipeline follows the architecture below:
 ## Project Structure
 
 ```text
-retail_sales_pipeline/
+retail_sales_datapipeline/
 │
 ├── dags/
 │   └── retail_sales_dag.py
@@ -103,24 +103,7 @@ retail_sales_pipeline/
 └── README.md
 ```
 
-Ici, on documente **l'organisation du projet**. Par exemple :
-
-```text
-dags/
-   → orchestration Airflow
-
-scripts/
-   → logique ETL et validation
-
-sql/
-   → structure PostgreSQL
-
-data/raw/
-   → données sources
-
-data/processed/
-   → données générées
-```
+The `dags/` directory contains the Airflow workflow, `scripts/` contains the ETL code, and `sql/` defines the PostgreSQL schema. Raw input belongs in `data/raw/`; generated output belongs in `data/processed/`.
 
 ## ETL Pipeline
 
@@ -348,8 +331,8 @@ Finally, the `validate_load` task performs post-load validation to ensure that t
 
 Clone the repository from GitHub and enter the project directory.
 
-    git clone https://github.com/Joubair-Ayoub/retail-sales-data-pipeline.git
-    cd retail-sales-data-pipeline
+    git clone https://github.com/rakesh242-cloud/retail_sales_datapipeline.git
+    cd retail_sales_datapipeline
 
 ### 2. Configure Environment Variables
 
@@ -421,7 +404,6 @@ Possible future improvements include:
 
 - Implement incremental loading instead of full table reloads.
 - Add automated unit and integration tests.
-- Add CI/CD using GitHub Actions.
 - Add more advanced data quality checks.
 - Improve monitoring and observability.
 - Add pipeline execution metrics.
@@ -429,5 +411,4 @@ Possible future improvements include:
 - Introduce database migrations.
 - Add business intelligence dashboards.
 - Deploy the pipeline to a cloud environment.
-- Add data lineage and metadata management.#   r e t a i l _ s a l e s _ d a t a p i p e l i n e  
- 
+- Add data lineage and metadata management.
