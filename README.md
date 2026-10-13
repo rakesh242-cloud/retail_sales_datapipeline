@@ -429,4 +429,5 @@ Possible future improvements include:
 - Introduce database migrations.
 - Add business intelligence dashboards.
 - Deploy the pipeline to a cloud environment.
-- Add data lineage and metadata management.
+- Add data lineage and metadata management.#   r e t a i l _ s a l e s _ d a t a p i p e l i n e  
+ 
